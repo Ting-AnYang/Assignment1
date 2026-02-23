@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NYUAD Campus Cat Pageant</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+<!-- navigation bar -->
+    <nav class="top-menu">
+        <a href="#menu" class="button">MENU</a>
+        <a href="#cats" class="button">CATS</a>
+        <a href="#video" class="button">VIDEO</a>
+        <a href="#vote" class="button"><i class="fa-solid fa-paw"></i> VOTE!</a>    
+    </nav>
+
+    <section id="menu" class="center-area">
+        <div class="title-box">
+            <h1 style="text-align: center">
+                <i class="fa-solid fa-paw" style="color: var(--coral); margin-right: 10px;"></i>
+                NYUAD Campus Cat Pageant
+            </h1>    
+            <img src="campus cat page.png" alt="NYUAD pic">
+        </div>
+    </section>
+
+    <hr>
+<!-- cat profile image carousel section -->
+    <section id="cats" class="wrap">
+        <h1 style="text-align: center">
+            <i class="fa-solid fa-paw" style="color: var(--coral); margin-right: 10px;"></i>
+            Meet the Cats!
+        </h1>        
+        
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="midori 1.png">
+                <div class="text">Midori has been a campus cat since 2022. He is a very loving boy who gets along with most of the other cats.</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="shiru 1.png">
+                <div class="text">Shiru has been a campus cat since 2020. She is a cuddly, sassy diva who enjoys having attention all to herself.</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="zenzero 1.jpg">
+                <div class="text">Zenzero has been a campus cat since 2023. He is a very friendly boy bites playfully when overexcited. </div>
+            </div>
+            <div class="mySlides fade"><img src="midori2.png"><div class="text">Midori showing belly.</div></div>
+            <div class="mySlides fade"><img src="shiru2.png"><div class="text">Shiru taking a beauty nap</div></div>
+            <div class="mySlides fade"><img src="zenzero2.png"><div class="text">Zenzero looking yonder.</div></div>
+            <div class="mySlides fade"><img src="midori3.jpg"><div class="text">Midori serving face.</div></div>
+            <div class="mySlides fade"><img src="shiru3.jpg"><div class="text">Shiru serving face behind some stairs.</div></div>
+            <div class="mySlides fade"><img src="zenzero3.jpg"><div class="text">Zenzero caught mid-sneeze.</div></div>
+    <!-- image carousel buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+    </section>
+
+    <hr>
+
+    <!-- video section -->
+    <section id="video" class="wrap">
+        <h1 style="text-align: center">
+            <i class="fa-solid fa-paw" style="color: var(--coral); margin-right: 10px;"></i>
+            Know your cats!
+        </h1>    
+        <div class="video-container">
+            <iframe src="https://drive.google.com/file/d/1VuQ7DVTPdtlqDIWGAFxsZqzntVPUqGNN/preview" allow="autoplay"></iframe>
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- pageant voting section -->
+    <section id="vote" class="wrap">
+        <h1 style="text-align: center">
+            <i class="fa-solid fa-paw" style="color: var(--coral); margin-right: 10px;"></i>
+            Cat Pageant
+        </h1>    
+        <p style="text-align:center">Click on image to vote (results update instantly)</p>
+        
+        <!-- individual voting "cards" for each cat -->
+        <div class="grid" id="catGrid">
+            <button class="card" data-cat="midori">
+                <img src="midori 1.png" style="width:100%">
+                <div class="title">Midori</div>
+                <div class="meta">
+                    <span class="count" data-count="midori">0</span>
+                    <span class="pct" data-pct="midori">0%</span>
+                </div>
+            </button>
+            
+            <button class="card" data-cat="zenzero">
+                <img src="zenzero 1.jpg" style="width:100%">
+                <div class="title">Zenzero</div>
+                <div class="meta">
+                    <span class="count" data-count="zenzero">0</span>
+                    <span class="pct" data-pct="zenzero">0%</span>
+                </div>
+            </button>
+            
+            <button class="card" data-cat="shiru">
+                <img src="shiru 1.png" style="width:100%">
+                <div class="title">Shiru</div>
+                <div class="meta">
+                    <span class="count" data-count="shiru">0</span>
+                    <span class="pct" data-pct="shiru">0%</span>
+                </div>
+            </button>
+        </div>
+
+        <div class="panel">
+            <div class="status"><span id="statusText">No votes yet.</span></div>
+        </div>
+
+        <div class="feed">
+            <h2>Recent votes</h2>
+            <ul id="feedList"></ul>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
